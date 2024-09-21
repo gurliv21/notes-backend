@@ -2,25 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.py", 
+      "src": "api/**/*.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "vite.config.ts", 
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",  
+      "src": "/api/(.*)",
       "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",  
-      "dest": "/index.html"
     }
   ]
 }
